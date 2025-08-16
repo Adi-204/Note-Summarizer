@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Notes Summarizer
 
-## Getting Started
+A powerful AI-powered application that transforms meeting transcripts and notes into structured, actionable summaries with a modern, ChatGPT-inspired interface.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **📁 File Upload**: Upload text transcripts (.txt files) easily
+- **🎯 Custom Prompts**: Specify exactly how you want your summary formatted
+- **🤖 AI-Powered**: Uses Google's Gemini model for intelligent summarization
+- **✏️ Editable Summaries**: Review and edit generated summaries before sharing
+- **📧 Email Sharing**: Send summaries with custom subjects directly to team members
+- **💾 Download**: Save summaries as text files for offline use
+- **🎨 Modern UI**: Dark theme with ChatGPT-inspired design and responsive layout
+- **📱 Responsive Design**: Works seamlessly on desktop and mobile devices
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Set up environment variables:**
+   - Copy `.env.example` to `.env`
+   - Add your Google AI API key and email credentials
+   - See [SETUP.md](./SETUP.md) for detailed instructions
 
-## Learn More
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Open [http://localhost:3000](http://localhost:3000)** in your browser
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ How It Works
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Upload**: Upload a text transcript (meeting notes, call transcript, etc.)
+2. **Customize**: Input custom instructions (e.g., "Summarize in bullet points for executives")
+3. **Generate**: Click "Generate Summary" to create an AI-powered summary
+4. **Edit**: Review and edit the generated summary as needed
+5. **Share**: Send the summary via email with custom subject or download it
 
-## Deploy on Vercel
+## 🏗️ Built With
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js 15** - React framework with App Router
+- **Google AI (Gemini)** - Advanced AI summarization
+- **Nodemailer** - Email functionality with custom subjects
+- **Tailwind CSS** - Modern, responsive UI with dark theme
+- **ShadCN UI** - Beautiful, accessible component library
+- **Radix UI** - Accessible component primitives
+- **TypeScript** - Type-safe development
+- **Sonner** - Modern toast notifications
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 UI Features
+
+- **Dark Theme**: Modern dark interface for better readability
+- **Two-Column Layout**: Input section on left, summary on right
+- **Responsive Grid**: Adapts to different screen sizes
+- **Scrollable Content**: Fixed height summary area with scrolling
+- **Toast Notifications**: User feedback for all actions
+- **Dialog Modals**: Clean email sharing interface
+
+## 📋 Prerequisites
+
+- Node.js 18+
+- Google AI API key
+- Email account for sending summaries
+
+## 📚 Documentation
+
+- [Setup Guide](./SETUP.md) - Detailed installation and configuration
+- [API Reference](./docs/api.md) - API endpoint documentation
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
