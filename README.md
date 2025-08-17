@@ -13,6 +13,12 @@ A powerful AI-powered application that transforms meeting transcripts and notes 
 - **🎨 Modern UI**: Dark theme with ChatGPT-inspired design and responsive layout
 - **📱 Responsive Design**: Works seamlessly on desktop and mobile devices
 
+## 📋 Prerequisites
+
+- Node.js 18+
+- Google AI API key
+- Email account for sending summaries
+
 ## 🚀 Quick Start
 
 1. **Install dependencies:**
@@ -40,36 +46,32 @@ A powerful AI-powered application that transforms meeting transcripts and notes 
 4. **Edit**: Review and edit the generated summary as needed
 5. **Share**: Send the summary via email with custom subject or download it
 
-## 🏗️ Built With
+## Tech Stack
 
-- **Next.js 15** - React framework with App Router
-- **Google AI (Gemini)** - Advanced AI summarization
-- **Nodemailer** - Email functionality with custom subjects
-- **Tailwind CSS** - Modern, responsive UI with dark theme
-- **ShadCN UI** - Beautiful, accessible component library
-- **Radix UI** - Accessible component primitives
-- **TypeScript** - Type-safe development
-- **Sonner** - Modern toast notifications
+- **Frontend:**
+  - [Next.js](https://nextjs.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Tailwind CSS](https://tailwindcss.com/) for styling
+  - [ShadCN UI](https://ui.shadcn.com/) for accessible, customizable components
 
-## 🎨 UI Features
-
-- **Dark Theme**: Modern dark interface for better readability
-- **Two-Column Layout**: Input section on left, summary on right
-- **Responsive Grid**: Adapts to different screen sizes
-- **Scrollable Content**: Fixed height summary area with scrolling
-- **Toast Notifications**: User feedback for all actions
-- **Dialog Modals**: Clean email sharing interface
-
-## 📋 Prerequisites
-
-- Node.js 18+
-- Google AI API key
-- Email account for sending summaries
+- **Backend/API:**
+  - Next.js API routes (`/api/generate-summary`, `/api/send-email`)
+  - [@google/genai](https://www.npmjs.com/package/@google/genai) for AI-powered summarization (Gemini model)
+  - [Nodemailer](https://nodemailer.com/) for sending emails
 
 ## 📚 Documentation
 
 - [Setup Guide](./SETUP.md) - Detailed installation and configuration
 - [API Reference](./docs/api.md) - API endpoint documentation
+
+## Approach & Process
+
+- **User-Centric Design:** The application is built to make transcript summarization simple, fast, and actionable for users. The UI is modern, responsive, and inspired by ChatGPT for familiarity and ease of use.
+- **Component-Based Architecture:** The frontend is modular, using reusable React components for maintainability and scalability. Each UI section (input, summary, email, etc.) is a separate component.
+- **Centralized State Management:** All business logic and state are managed in a custom React hook (`useNotesSummarizer`), keeping components clean and focused on presentation.
+- **API-Driven:** The backend exposes two main endpoints for summary generation and email sending, keeping the frontend decoupled from implementation details.
+- **Error Handling & Feedback:** User actions are accompanied by toast notifications (using Sonner) for clear feedback on success or failure.
+- **Security:** Sensitive credentials (API keys, email passwords) are stored in environment variables and never exposed to the client.
 
 ## 🤝 Contributing
 
